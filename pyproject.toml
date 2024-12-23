@@ -18,3 +18,16 @@ skip = '__pycache__'
 
 [tool.pre_commit]
 exclude = '.git|__pycache__|venv'
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q -p no:warnings"
+testpaths = [
+    "tests"
+]
+pythonpath = [
+    "src"
+]
